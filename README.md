@@ -61,12 +61,6 @@ motor velocity percentages are converted to RPM.
 
 ## Toolchain and validation
 
-The Makefile selects the Homebrew-installed Arm GNU toolchain under
-`/Applications/ArmGNUToolchain`. There is no dependency on the extracted
-Codex toolchain. All compiler, linker, and binutils commands use the same
-toolchain. C++23 is selected explicitly.
-Override the location with `make TOOLCHAIN_ROOT=/path/to/toolchain`.
-
 Build with `make -j4`. A clean ARM firmware build and link passed using Arm
 GNU 15.3.rel2, producing `bin/cold.package.bin` and `bin/hot.package.bin`.
 The bundled PROS headers emit LLEMU deprecation warnings; this project's GUI
